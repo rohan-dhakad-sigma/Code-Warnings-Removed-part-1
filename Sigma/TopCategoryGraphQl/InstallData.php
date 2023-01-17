@@ -58,7 +58,7 @@ class InstallData implements InstallDataInterface
                 'type'         => 'varchar',
                 'label'        => 'Thumbnail Image',
                 'input'        => 'image',
-                'backend'      => Magento\Catalog\Model\Category\Attribute\Backend::IMAGE,
+                'backend'      => \Magento\Catalog\Model\Category\Attribute\Backend\Image::class,
                 'sort_order'   => 110,
                 'source'       => '',
                 'global'       => 1,
@@ -70,7 +70,7 @@ class InstallData implements InstallDataInterface
 
             ]
         );
-        / Create attribute top_category for category /
+        // Create attribute top_category for category /
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Category::ENTITY,
             'top_category',
@@ -91,4 +91,3 @@ class InstallData implements InstallDataInterface
         );
     }
 }
-
